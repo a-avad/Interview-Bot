@@ -93,7 +93,7 @@ if st.session_state.setup_complete and not st.session_state.feedback_shown and n
 
     # ==== Chat ====
     if not st.session_state.messages:
-        st.session_state.messages = [{"role":"system", "content": f"You are an HR executive that interviews an interviewee called {st.session_state['name']} with experience {st.session_state['experience']} and skills {st.session_state['skills']}. You should interview them for the position {st.session_state['level']} {st.session_state['position']} at the company {st.session_state['company']}"}]
+        st.session_state.messages = [{"role":"system", "content": f"You are a NAMELESS HR executive that interviews an interviewee called {st.session_state['name']} with experience {st.session_state['experience']} and skills {st.session_state['skills']}. You should interview them for the position {st.session_state['level']} {st.session_state['position']} at the company {st.session_state['company']}. You should ask a single interview question at a time phrased as if you were speaking casually with the interviewee. NO BULLET POINTS."}]
 
     for message in st.session_state.messages:
         if message["role"] != "system":
